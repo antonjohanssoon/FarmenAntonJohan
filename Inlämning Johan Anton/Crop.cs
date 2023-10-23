@@ -23,7 +23,7 @@
         //lägg till i kvantitet 
         public void AddCrop(int _quantity)
         {
-            cropmanager.GetCrops();
+            //cropmanager.GetCrops();
             Console.WriteLine("Write the ID-number of the crop you want to increase");
             int cropInput = 0;
 
@@ -49,9 +49,9 @@
             }
         }
 
-        public bool TakeCrop()
-        {
-            //skall ta Quantity!
-        }
+        //public bool TakeCrop()
+        //{
+        //skall ta Quantity!
+        //}
     }
 }

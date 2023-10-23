@@ -26,7 +26,7 @@
             }
         }
 
-        private void AddAnimal()
+        public void AddAnimal()
         {
             bool QuitLoop = false;
             ViewAnimal();
@@ -36,16 +36,23 @@
 
                 for (int i = 0; i < 2; i++)
                 {
-                    Console.WriteLine("What animal would you like to add?");
+                    Console.WriteLine("What´s the name of the animal you would like to add?");
                     string input1 = Console.ReadLine();
 
                     Console.WriteLine("What specie is the animal?");
                     string input2 = Console.ReadLine();
 
-                    Console.WriteLine("What crop does it eat? Food crops or crops?");
-                    string input3 = (Console.ReadLine());
+                    Console.WriteLine("How many crops can the animal eat?");
+                    int loopInput = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("What crops should the animal eat?");
+                    List<string> NewAnimalCrop = new List<string>();
+                    for (i = 0; i < loopInput; i++)
+                    {
+                        string cropInput = Console.ReadLine();
+                        NewAnimalCrop.Add(cropInput);
+                    }
 
-                    Animal newanimal = new Animal(input1, input2, input3);
+                    Animal newanimal = new Animal(input1, input2, NewAnimalCrop);
                     animalList.Add(newanimal);
 
                     Console.WriteLine("Do you want to continue? yes/no?");
@@ -54,6 +61,7 @@
                     if (input4 == "no")
                     {
                         QuitLoop = true;
+                        break;
                     }
                 }
             }
