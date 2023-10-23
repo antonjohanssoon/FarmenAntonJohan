@@ -26,6 +26,7 @@ C:\Users\johan\Downloads\Farm.anton.johan (1)\Farm.anton.johan\bin\Debug\net6.0\
 C:\Users\johan\Downloads\Farm.anton.johan (1)\Farm.anton.johan\bin\Debug\net6.0\Farm.anton.johan.pdb
 C:\Users\johan\Downloads\Farm.anton.johan (1)\Farm.anton.johan\obj\Debug\net6.0\Farm.anton.johan.genruntimeconfig.cache
 C:\Users\johan\Downloads\Farm.anton.johan (1)\Farm.anton.johan\obj\Debug\net6.0\ref\Farm.anton.johan.dll
+<<<<<<< HEAD
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfoInputs.cache
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfo.cs
@@ -40,3 +41,8 @@ C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\I
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.pdb
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.genruntimeconfig.cache
 C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\Inlämning Johan Anton\obj\Debug\net6.0\ref\Farm.anton.johan.dll
+=======
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\refint\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.pdb
+>>>>>>> f7ec12b96866930e96d64760344bd8f369425f5b
