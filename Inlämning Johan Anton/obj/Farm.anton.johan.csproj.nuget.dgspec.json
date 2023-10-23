@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johan\\Downloads\\Farm.anton.johan (1)\\Farm.anton.johan\\Farm.anton.johan.csproj": {}
+    "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johan\\Downloads\\Farm.anton.johan (1)\\Farm.anton.johan\\Farm.anton.johan.csproj": {
+    "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johan\\Downloads\\Farm.anton.johan (1)\\Farm.anton.johan\\Farm.anton.johan.csproj",
+        "projectUniqueName": "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
         "projectName": "Farm.anton.johan",
-        "projectPath": "C:\\Users\\johan\\Downloads\\Farm.anton.johan (1)\\Farm.anton.johan\\Farm.anton.johan.csproj",
+        "projectPath": "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
         "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johan\\Downloads\\Farm.anton.johan (1)\\Farm.anton.johan\\obj\\",
+        "outputPath": "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

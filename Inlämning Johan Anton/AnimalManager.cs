@@ -3,14 +3,13 @@
     public class AnimalManager
     {
         List<Animal> animalList = new List<Animal>();
-        List<string> acceptableCrops = new List<string> { "Wheat", "Corn", "Barley" };
 
         public AnimalManager()
         {
-            List<string> CowCrops = new List<string>();
-            List<string> BirdCrops = new List<string>();
-            List<string> GoatCrops = new List<string>();
-            List<string> PigCrops = new List<string>();
+            List<string> CowCrops = new List<string> { "Wheat", "Hay" };
+            List<string> BirdCrops = new List<string> { "Pellets" };
+            List<string> GoatCrops = new List<string> { "Maize" };
+            List<string> PigCrops = new List<string> { "Potato", "Carrot" };
 
             animalList.Add(new Animal("Märta", "Cow", CowCrops));
             animalList.Add(new Animal("Jens", "Bird", BirdCrops));
