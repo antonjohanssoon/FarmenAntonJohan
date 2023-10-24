@@ -4,13 +4,13 @@
     {
         public void MainMenu()
         {
-            CropManager cropmanager = new CropManager();
-            AnimalManager animalmanager = new AnimalManager();
+            CropManager cropmanager = new ();
+            AnimalManager animalmanager = new();
 
             Console.WriteLine("Where do you want to go?");
             Console.WriteLine("1. Animal Menu");
             Console.WriteLine("2. Crop Menu");
-            Console.WriteLine("9. Enought for today, goodbye!");
+            Console.WriteLine("9. End program");
             string input = Console.ReadLine();
             
             switch (input)
@@ -23,6 +23,7 @@
                     cropmanager.CropMenu();
                     break;
                 case "9":
+                    Console.WriteLine("Program: Ended");
                     break;
 
             }
