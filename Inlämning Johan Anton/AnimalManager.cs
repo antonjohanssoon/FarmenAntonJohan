@@ -28,8 +28,8 @@
         {
             Console.WriteLine("Choose crop by Idex.");
             bool CropLoop = false;
-            int cropchoice;
-            while (!catchLoop)
+            int cropchoice = 0;
+            while (!CropLoop)
             {
                 for (int i = 0; i < MenuCrops.Count; i++)
                 {
@@ -46,9 +46,9 @@
                 }
             }
             bool AnimalLoop = false;
-            
+
             //man gör att val av animal och sen kontrolleras svaret.
-            int AnimalChoice;
+            int AnimalChoice = 0;
             while (!AnimalLoop)
             {
 
@@ -86,7 +86,7 @@
                     break;
 
                 case "Bird":
-                    for (int i = 0; i < Bird.Count; i++)
+                    for (int i = 0; i < BirdCrops.Count; i++)
                     {
                         if (Crops.Name == BirdCrops[i])
                         {
@@ -97,7 +97,7 @@
                     break;
 
                 case "Goat":
-                    for (int i = 0; i < Goat.Count; i++)
+                    for (int i = 0; i < GoatCrops.Count; i++)
                     {
                         if (Crops.Name == GoatCrops[i])
                         {
