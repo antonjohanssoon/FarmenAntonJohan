@@ -88,7 +88,7 @@
 
         }
 
-        private void FeedAnimals(string Crop)
+        private void FeedAnimals(Crop aCrop)
         {
             ViewAnimal();
             Console.WriteLine("What animal do you want to feed? Answer by ID!");
@@ -99,6 +99,8 @@
                 if (input == animalList[i].Id)
                 {
                     //???
+                    //animalList[i].Feed();
+                    Console.WriteLine("We goit here!");
                 }
             }
 

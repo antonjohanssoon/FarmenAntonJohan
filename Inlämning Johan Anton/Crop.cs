@@ -51,7 +51,7 @@
 
         //public bool TakeCrop()
         //{
-        //skall ta Quantity!
+        //skall ge ifrån en bool som är false om crop är noll för då kan inte djuret äta den
         //}
     }
 }

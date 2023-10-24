@@ -16,7 +16,7 @@
             return $"Id: {Id}, Name: {Name}, Species: {Species}, AcceptableCropType: {AcceptableCropType}";
         }
 
-        public void Feed(Crop)
+        public void Feed(Crop acrop)
         {
             //vad äter djuret?
             //få fram en lista på alla djur så man kan välja vem man skall mata
