@@ -2,6 +2,7 @@
 {   //Innehåller djur som äter en vis typ av "Crop" med konstruktor som vi kan skapa en lista utav i AnimalManager
     public class Animal : Entity
     {
+        List<Crop> cropList;
         public string Species { get; set; }
         private List<string> AcceptableCropType { get; set; }
 
@@ -16,11 +17,13 @@
             return $"Id: {Id}, Name: {Name}, Species: {Species}, AcceptableCropType: {AcceptableCropType}";
         }
 
-        public void Feed(Crop)
+        public void Feed(Crop acrop)
         {
-            //vad äter djuret?
-            //få fram en lista på alla djur så man kan välja vem man skall mata
-            //sedan måste "AcceptableCropType == CropType " för att djuret skall äta det
+            acrop.Quantity -= 1;
         }
     }
 }
+//crops skall försvinna från quantity när ett djur äter crops.
+//vad äter djuret?
+//få fram en lista på alla djur så man kan välja vem man skall mata
+//sedan måste "AcceptableCropType == CropType " för att djuret skall äta det

@@ -3,13 +3,18 @@
     public class AnimalManager
     {
         List<Animal> animalList = new List<Animal>();
+        List<string> CowCrops;
+        List<string> BirdCrops;
+        List<string> GoatCrops;
+        List<string> PigCrops;
+
 
         public AnimalManager()
         {
-            List<string> CowCrops = new List<string> { "Wheat", "Hay" };
-            List<string> BirdCrops = new List<string> { "Pellets" };
-            List<string> GoatCrops = new List<string> { "Maize" };
-            List<string> PigCrops = new List<string> { "Potato", "Carrot" };
+            CowCrops = new List<string> { "Wheat", "Hay"};
+            BirdCrops = new List<string> { "Pellets"};
+            GoatCrops = new List<string> { "Maize"};
+            PigCrops = new List<string> { "Potato", "Carrot"};
 
             animalList.Add(new Animal("Märta", "Cow", CowCrops));
             animalList.Add(new Animal("Jens", "Bird", BirdCrops));
@@ -17,7 +22,105 @@
             animalList.Add(new Animal("Charlie", "Pig", PigCrops));
 
         }
+        //tar första indexen i , skapa en variabel som användren väljer.
+        public void AnimalMenu(List<Crop> MenuCrops)
+        {
+            Console.WriteLine("Choose crop by Idex.");
+            bool CropLoop = false;
+            int cropchoice;
+            while (!catchLoop)
+            {
+                for (int i = 0; i < MenuCrops.Count; i++)
+                {
+                    Console.WriteLine($"{i}\t{MenuCrops[i].Name} \n{MenuCrops[i].CropType}\n {MenuCrops[i].Quantity}");
+                }
+                try
+                {
+                    cropchoice = Convert.ToInt32(Console.ReadLine());
+                    CropLoop = true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
+            bool AnimalLoop = false;
+            int AnimalChoice;
+            while (!AnimalLoop)
+            {
 
+                for (int i = 0; i animalList.Count < ; i++)
+                {
+                    Console.WriteLine($"{i}\t{animalList[i].Name} \n {animalList[i].Id}\n ")
+                }
+                Console.WriteLine("Choose animal by index.");
+                try
+                {
+                    AnimalChoice = Convert.ToInt32(Console.ReadLine());
+                    AnimalLoop = true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
+            var Crops = MenuCrops[cropchoice]
+            Animal animal = animalList[AnimalChoice]
+            bool AnimalCrop = false;
+            switch (animal.Species)
+            {
+                case "Cow":
+                    for (int i = 0; i < CowCrops.Count; i++)
+                    {
+                        if (Crops.Name == CowCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+                case "Bird"
+                    for (int i = 0; i < CowCrops.Count; i++)
+                    {
+                        if (Crops.Name == CowCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+                case "Goat"
+                    for (int i = 0; i < CowCrops.Count; i++)
+                    {
+                        if (Crops.Name == CowCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+                case "Pig";
+                    for (int i = 0; i < CowCrops.Count; i++)
+                    {
+                        if (Crops.Name == CowCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+
+            }
+            if (AnimalCrop == true)
+            {
+                FeedAnimals(animal,Crops);
+            }
+            else
+            {
+                Console.WriteLine("Wrong Croptype.");
+            }
+            
+        }
         private void ViewAnimal()
         {
             for (int i = 0; i < animalList.Count; i++)
@@ -44,8 +147,10 @@
 
                     Console.WriteLine("How many crops can the animal eat?");
                     int loopInput = Convert.ToInt32(Console.ReadLine());
+
                     Console.WriteLine("What crops should the animal eat?");
                     List<string> NewAnimalCrop = new List<string>();
+
                     for (i = 0; i < loopInput; i++)
                     {
                         string cropInput = Console.ReadLine();
@@ -87,21 +192,10 @@
             }
 
         }
-
-        private void FeedAnimals(string Crop)
+        //tar mot från animalMenu
+        private void FeedAnimals(Animal aAnimal,Crop acrop)
         {
-            ViewAnimal();
-            Console.WriteLine("What animal do you want to feed? Answer by ID!");
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 0; i < animalList.Count; i++)
-            {
-                if (input == animalList[i].Id)
-                {
-                    //???
-                }
-            }
-
+            aAnimal.Feed(acrop)
         }
 
     }

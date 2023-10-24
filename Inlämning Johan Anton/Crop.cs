@@ -1,4 +1,6 @@
-﻿namespace Farm.anton.johan
+﻿using System.Diagnostics;
+
+namespace Farm.anton.johan
 {   //Innehåller olika växter med antal, typer,namn, id 
 
     public class Crop : Entity
@@ -49,9 +51,12 @@
             }
         }
 
-        //public bool TakeCrop()
-        //{
-        //skall ta Quantity!
-        //}
+        public bool TakeCrop(Crop acrop)
+        {
+            if (acrop.Quantity < 0)
+            {
+                return false;
+            }
+        }
     }
 }

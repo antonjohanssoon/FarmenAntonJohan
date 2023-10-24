@@ -12,18 +12,18 @@
             Console.WriteLine("2. Crop Menu");
             Console.WriteLine("9. Enought for today, goodbye!");
             string input = Console.ReadLine();
-
+            
             switch (input)
             {
                 case "1":
-                    animalmanager.AnimalMenu();
+                    var Crops = cropmanager.GetCrops();
+                    animalmanager.AnimalMenu(Crops);
                     break;
                 case "2":
                     cropmanager.CropMenu();
                     break;
                 case "9":
                     break;
-
 
             }
         }
