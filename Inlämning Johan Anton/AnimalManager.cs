@@ -23,6 +23,7 @@
 
         }
         //tar första indexen i , skapa en variabel som användren väljer.
+        //MenuCrops deklareras här, den vet bara att det är en lista som består av crops. 
         public void AnimalMenu(List<Crop> MenuCrops)
         {
             Console.WriteLine("Choose crop by Idex.");
@@ -45,13 +46,15 @@
                 }
             }
             bool AnimalLoop = false;
+            
+            //man gör att val av animal och sen kontrolleras svaret.
             int AnimalChoice;
             while (!AnimalLoop)
             {
 
-                for (int i = 0; i animalList.Count < ; i++)
+                for (int i = 0; i < animalList.Count ; i++)
                 {
-                    Console.WriteLine($"{i}\t{animalList[i].Name} \n {animalList[i].Id}\n ")
+                    Console.WriteLine($"{i}\t{animalList[i].Name} \n {animalList[i].Id}\n ");
                 }
                 Console.WriteLine("Choose animal by index.");
                 try
@@ -64,9 +67,11 @@
                     Console.WriteLine(e);
                 }
             }
-            var Crops = MenuCrops[cropchoice]
-            Animal animal = animalList[AnimalChoice]
+            //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
+            Crop Crops = MenuCrops[cropchoice];
+            Animal animal = animalList[AnimalChoice];
             bool AnimalCrop = false;
+            //switchCasen kollar så att varje djur tar den cropen man skrivit och retunerar true om det stämmer 
             switch (animal.Species)
             {
                 case "Cow":
@@ -79,30 +84,11 @@
                         }
                     }
                     break;
-                case "Bird"
-                    for (int i = 0; i < CowCrops.Count; i++)
+
+                case "Bird":
+                    for (int i = 0; i < Bird.Count; i++)
                     {
-                        if (Crops.Name == CowCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-                case "Goat"
-                    for (int i = 0; i < CowCrops.Count; i++)
-                    {
-                        if (Crops.Name == CowCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-                case "Pig";
-                    for (int i = 0; i < CowCrops.Count; i++)
-                    {
-                        if (Crops.Name == CowCrops[i])
+                        if (Crops.Name == BirdCrops[i])
                         {
                             AnimalCrop = true;
                             break;
@@ -110,7 +96,32 @@
                     }
                     break;
 
+                case "Goat":
+                    for (int i = 0; i < Goat.Count; i++)
+                    {
+                        if (Crops.Name == GoatCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+
+                case "Pig":
+                    for (int i = 0; i < PigCrops.Count; i++)
+                    {
+                        if (Crops.Name == PigCrops[i])
+                        {
+                            AnimalCrop = true;
+                            break;
+                        }
+                    }
+                    break;
+                    //behöver skapa en ny case för listan man skapar själv om man väljer att skapa ett nytt djur
+
             }
+
+            //kontroll om djuret äter den cropen
             if (AnimalCrop == true)
             {
                 FeedAnimals(animal,Crops);
@@ -184,7 +195,7 @@
             if (animalToRemove != null)
             {
                 animalList.Remove(animalToRemove);
-                Console.WriteLine("Animal removed succesfully from the list!");
+                Console.WriteLine("Animal succesfully removed from the list!");
             }
             else
             {
@@ -192,10 +203,13 @@
             }
 
         }
-        //tar mot från animalMenu
+        //tar mot från animalMenu, matematiken sker i feed funktionen som ligger i animal.
+        //aAnimal = ett djur som blivit valt i Animalchoise
+        //acrop väljs även i cropchoice
+
         private void FeedAnimals(Animal aAnimal,Crop acrop)
         {
-            aAnimal.Feed(acrop)
+            aAnimal.Feed(acrop);
         }
 
     }
