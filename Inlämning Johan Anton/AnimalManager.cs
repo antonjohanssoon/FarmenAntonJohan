@@ -1,43 +1,72 @@
 ﻿namespace Farm.anton.johan
-{
+{ //göra om animal-classens konstruktor. så att listan tar typ 2
     public class AnimalManager
     {
-        List<Animal> animalList = new List<Animal>();
-        List<string> CowCrops;
-        List<string> BirdCrops;
-        List<string> GoatCrops;
-        List<string> PigCrops;
-
-
+       List<Animal> animalList = new List<Animal>();
+       
         public AnimalManager()
         {
-            CowCrops = new List<string> { "Wheat", "Hay"};
-            BirdCrops = new List<string> { "Pellets"};
-            GoatCrops = new List<string> { "Maize"};
-            PigCrops = new List<string> { "Potato", "Carrot"};
-
-            animalList.Add(new Animal("Märta", "Cow", CowCrops));
-            animalList.Add(new Animal("Jens", "Bird", BirdCrops));
-            animalList.Add(new Animal("Dante", "Goat", GoatCrops));
-            animalList.Add(new Animal("Charlie", "Pig", PigCrops));
+            animalList.Add(new Animal("Märta", "Cow", "Wheat", "Grass"));
+            animalList.Add(new Animal("Jens", "Bird", "Seeds", "Maize"));
+            animalList.Add(new Animal("Dante", "Goat", "Grass","Wheat"));
+            animalList.Add(new Animal("Charlie", "Pig", "Maize","Compost"));
 
         }
         //tar första indexen i , skapa en variabel som användren väljer.
         //MenuCrops deklareras här, den vet bara att det är en lista som består av crops. 
         public void AnimalMenu(List<Crop> MenuCrops)
         {
+            bool breakbool = false;
+            while (breakbool)
+            {
+
+            
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1: View Animals.");
+                Console.WriteLine("2: Add Animals.");
+                Console.WriteLine("3: Remove Animal.");
+                Console.WriteLine("4: Quit");
+                string switchinput = Console.ReadLine();
+
+                switch (switchinput)
+                {
+                    case "1":
+                        ViewAnimal();
+                        break;
+                    case "2":
+                        AddAnimal();
+                        break;
+                    case "3":
+                        RemoveAnimal();
+                        break;
+                    case "4":
+                        Console.WriteLine("You quit the program!");
+                        breakbool = true;
+                        break;
+                
+                }
+    
+            }
+
             Console.WriteLine("Choose crop by Idex.");
             bool CropLoop = false;
             int cropchoice = 0;
+
+            //Skapar denna variablen för att kunna jämföra cropchoice2 med crop1/crop2 som djuret har.
+            Crop cropchoice2 = null;
+
             while (!CropLoop)
             {
                 for (int i = 0; i < MenuCrops.Count; i++)
                 {
-                    Console.WriteLine($"{i}\t{MenuCrops[i].Name} \n{MenuCrops[i].CropType}\n {MenuCrops[i].Quantity}");
+                    Console.WriteLine($"{i}, {MenuCrops[i].Name} , {MenuCrops[i].CropType},  {MenuCrops[i].Quantity} ");
+                    Console.WriteLine("");
                 }
                 try
                 {
                     cropchoice = Convert.ToInt32(Console.ReadLine());
+                    //Gör om cropchoice som är int till cropchoice2 som är av typen Crop
+                    cropchoice2 = MenuCrops[cropchoice];
                     CropLoop = true;
                 }
                 catch (Exception e)
@@ -54,7 +83,7 @@
 
                 for (int i = 0; i < animalList.Count ; i++)
                 {
-                    Console.WriteLine($"{i}\t{animalList[i].Name} \n {animalList[i].Id}\n ");
+                    Console.WriteLine($"{i}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
                 }
                 Console.WriteLine("Choose animal by index.");
                 try
@@ -67,58 +96,20 @@
                     Console.WriteLine(e);
                 }
             }
+
             //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
             Crop Crops = MenuCrops[cropchoice];
             Animal animal = animalList[AnimalChoice];
             bool AnimalCrop = false;
-            //switchCasen kollar så att varje djur tar den cropen man skrivit och retunerar true om det stämmer 
-            switch (animal.Species)
+            
+            
+            //här används cropname från cropchoice och sedan om de stämmer överens med crop1/crop2
+            for (int i = 0; i < animalList.Count; i++)
             {
-                case "Cow":
-                    for (int i = 0; i < CowCrops.Count; i++)
-                    {
-                        if (Crops.Name == CowCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-
-                case "Bird":
-                    for (int i = 0; i < BirdCrops.Count; i++)
-                    {
-                        if (Crops.Name == BirdCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-
-                case "Goat":
-                    for (int i = 0; i < GoatCrops.Count; i++)
-                    {
-                        if (Crops.Name == GoatCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-
-                case "Pig":
-                    for (int i = 0; i < PigCrops.Count; i++)
-                    {
-                        if (Crops.Name == PigCrops[i])
-                        {
-                            AnimalCrop = true;
-                            break;
-                        }
-                    }
-                    break;
-                    //behöver skapa en ny case för listan man skapar själv om man väljer att skapa ett nytt djur
-
+                if (cropchoice2.Name == animalList[i].Crop1 || cropchoice2.Name == animalList[i].Crop2)
+                {
+                    AnimalCrop = true;
+                }
             }
 
             //kontroll om djuret äter den cropen
@@ -139,7 +130,6 @@
                 animalList[i].GetDescription();
             }
         }
-
         public void AddAnimal()
         {
             bool QuitLoop = false;
@@ -156,19 +146,11 @@
                     Console.WriteLine("What specie is the animal?");
                     string input2 = Console.ReadLine();
 
-                    Console.WriteLine("How many crops can the animal eat?");
-                    int loopInput = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Write 2 crops the animal can eat.");
+                    string crop1 = Console.ReadLine();
+                    string crop2 = Console.ReadLine();
 
-                    Console.WriteLine("What crops should the animal eat?");
-                    List<string> NewAnimalCrop = new List<string>();
-
-                    for (i = 0; i < loopInput; i++)
-                    {
-                        string cropInput = Console.ReadLine();
-                        NewAnimalCrop.Add(cropInput);
-                    }
-
-                    Animal newanimal = new Animal(input1, input2, NewAnimalCrop);
+                    Animal newanimal = new Animal(input1, input2, crop1, crop2);
                     animalList.Add(newanimal);
 
                     Console.WriteLine("Do you want to continue? yes/no?");
@@ -201,8 +183,9 @@
             {
                 Console.WriteLine("No animal found with that ID!");
             }
-
         }
+
+
         //tar mot från animalMenu, matematiken sker i feed funktionen som ligger i animal.
         //aAnimal = ett djur som blivit valt i Animalchoise
         //acrop väljs även i cropchoice

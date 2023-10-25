@@ -6,12 +6,10 @@
         List<Crop> cropList = new List<Crop>();
         public CropManager()
         {
-            cropList.Add(new Crop("Potato", "crops", 80));
-            cropList.Add(new Crop("Carrot", "crops", 50));
-            cropList.Add(new Crop("Hay", "Food crops", 100));
-            cropList.Add(new Crop("Maize", "Food crops", 25));
-            cropList.Add(new Crop("Wheat", "Food crops", 1000));
-            cropList.Add(new Crop("Pellets", "Dry crops", 200));
+            cropList.Add(new Crop("Grass", "Herbs", 80));
+            cropList.Add(new Crop("Maize", "Herbs", 50));
+            cropList.Add(new Crop("Wheat", "Dry Herbs", 100));
+            cropList.Add(new Crop("Compost", "Other", 25));
         }
         private void ViewCrop()
         {
