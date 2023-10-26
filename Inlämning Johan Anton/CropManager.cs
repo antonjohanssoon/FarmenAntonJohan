@@ -18,7 +18,7 @@
                 Console.WriteLine(cropList[i].GetDescription());
             }
         }
-        //öka kvantitet samt om befintligt crop finns, öka bara kvantitet
+
         private void AddCrop()
         {
             bool QuitLoop = true;
@@ -31,6 +31,15 @@
                 {
                     Console.WriteLine("What crop would you like to add?");
                     string input1 = Console.ReadLine();
+                    if (input1.ToLower() == cropList[i].Name.ToLower())
+                    {
+                        Console.WriteLine("What quantity would you like to add to " + cropList[i].Name + " ?");
+                        int input5 = Convert.ToInt32(Console.ReadLine());
+                        cropList[i].Quantity += input5;
+                        Console.WriteLine(cropList[i].Name + " new quantity is: " + cropList[i].Quantity);
+                        QuitLoop = false;
+                        break;
+                    }
 
                     Console.WriteLine("What type of crops is it?");
                     string input2 = Console.ReadLine();
@@ -41,12 +50,7 @@
                     Crop newcrop = new Crop(input1, input2, input3);
                     cropList.Add(newcrop);
 
-                    if (input1.ToLower() == cropList[i].Name.ToLower())
-                    {
-                        Console.WriteLine("What quantity would you like to add?");
-                        int input5 = Convert.ToInt32(Console.ReadLine());
-                        input5 += cropList[i].Quantity;
-                    }
+
                 }// måste lägga in en funktion ifall en crop redan finns så skall endast quantity öka
                 //
             }
