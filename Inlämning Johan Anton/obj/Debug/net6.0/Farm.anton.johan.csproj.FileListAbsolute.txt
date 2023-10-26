@@ -46,3 +46,14 @@ C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämnin
 C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\refint\Farm.anton.johan.dll
 C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.pdb
 >>>>>>> f7ec12b96866930e96d64760344bd8f369425f5b
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfoInputs.cache
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfo.cs
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.csproj.CoreCompileInputs.cache
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.exe
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.deps.json
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.runtimeconfig.json
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.pdb
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.genruntimeconfig.cache
+C:\Users\johan\OneDrive\Plugg\Johan. Anton.Inlämning\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\ref\Farm.anton.johan.dll

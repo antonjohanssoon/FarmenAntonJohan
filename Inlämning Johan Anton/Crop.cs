@@ -49,9 +49,13 @@
             }
         }
 
-        //public bool TakeCrop()
-        //{
-        //skall ge ifrån en bool som är false om crop är noll för då kan inte djuret äta den
-        //}
+        public bool TakeCrop(Crop acrop)
+        {
+            if (acrop.Quantity < 0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
