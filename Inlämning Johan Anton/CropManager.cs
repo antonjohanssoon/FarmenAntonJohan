@@ -6,25 +6,25 @@
         List<Crop> cropList = new List<Crop>();
         public CropManager()
         {
-            cropList.Add(new Crop("Grass", "Herbs", 80));
-            cropList.Add(new Crop("Maize", "Herbs", 50));
-            cropList.Add(new Crop("Wheat", "Dry Herbs", 100));
-            cropList.Add(new Crop("Compost", "Other", 25));
+            cropList.Add(new Crop("Grass", "Herbs", 8));
+            cropList.Add(new Crop("Maize", "Herbs", 5));
+            cropList.Add(new Crop("Wheat", "Dry Herbs", 10));
+            cropList.Add(new Crop("Compost", "Other", 7));
         }
         private void ViewCrop()
         {
             for (int i = 0; i < cropList.Count; i++)
             {
-                cropList[i].GetDescription();
+                Console.WriteLine(cropList[i].GetDescription());
             }
         }
         //öka kvantitet samt om befintligt crop finns, öka bara kvantitet
         private void AddCrop()
         {
-            bool QuitLoop = false;
+            bool QuitLoop = true;
             ViewCrop();
 
-            while (!QuitLoop)
+            while (QuitLoop)
             {
 
                 for (int i = 0; i < 2; i++)
@@ -32,7 +32,7 @@
                     Console.WriteLine("What crop would you like to add?");
                     string input1 = Console.ReadLine();
 
-                    Console.WriteLine("Is it crops or food crops?");
+                    Console.WriteLine("What type of crops is it?");
                     string input2 = Console.ReadLine();
 
                     Console.WriteLine("What quantity?");
@@ -47,15 +47,8 @@
                         int input5 = Convert.ToInt32(Console.ReadLine());
                         input5 += cropList[i].Quantity;
                     }
-
-                    Console.WriteLine("Do you want to continue? yes/no?");
-                    string input4 = Console.ReadLine();
-
-                    if (input4 == "no")
-                    {
-                        QuitLoop = true;
-                    }
-                }
+                }// måste lägga in en funktion ifall en crop redan finns så skall endast quantity öka
+                //
             }
 
         }
@@ -64,7 +57,7 @@
         {
             ViewCrop();
 
-            Console.WriteLine("What crop do you want to remove? Answear by Id: ");
+            Console.WriteLine("What crop do you want to remove? Answear by Id: "); //lägg in så man ser vilken man valde och dess nuvarande quantity
             int input1 = Convert.ToInt32(Console.ReadLine());
             bool Cropfound = false;
 
@@ -78,8 +71,9 @@
                         Console.WriteLine("What quantity do you want to remove?");
                         int subinput = Convert.ToInt32(Console.ReadLine());
                         int newquantity = cropList[i].Quantity - subinput;
-                        Console.WriteLine(cropList[i].GetDescription);
+                        Console.WriteLine(cropList[i].Name + " new quantity is: " + newquantity);
                         Cropfound = true;
+
                         return newquantity;
                     }
                     else
