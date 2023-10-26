@@ -25,7 +25,8 @@
                 Console.WriteLine("1: View Animals.");
                 Console.WriteLine("2: Add Animals.");
                 Console.WriteLine("3: Remove Animal.");
-                Console.WriteLine("4: Quit");
+                Console.WriteLine("4: Feed animal");
+                Console.WriteLine("5: Quit");
                 string switchinput = Console.ReadLine();
 
                 switch (switchinput)
@@ -40,6 +41,8 @@
                         RemoveAnimal();
                         break;
                     case "4":
+                        break;
+                    case "5":
                         Console.WriteLine("You quit the program!");
                         breakbool = true;
                         break;
@@ -119,7 +122,7 @@
             }
             else
             {
-                Console.WriteLine("Wrong Croptype.");
+                Console.WriteLine("Wrong crop type for this animal.");
             }
             
         }
@@ -143,7 +146,7 @@
                     Console.WriteLine("What´s the name of the animal you would like to add?");
                     string input1 = Console.ReadLine();
 
-                    Console.WriteLine("What specie is the animal?");
+                    Console.WriteLine("What species is the animal?");
                     string input2 = Console.ReadLine();
 
                     Console.WriteLine("Write 2 crops the animal can eat.");
