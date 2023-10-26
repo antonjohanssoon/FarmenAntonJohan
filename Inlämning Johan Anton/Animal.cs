@@ -3,7 +3,6 @@
     public class Animal : Entity
     {
         public string Species { get; set; }
-        private string[] AcceptableCropType = new string[2];
         public string Crop1;
         public string Crop2;
         public Animal(string _name, string _species, string crop1, string crop2) : base(_name)
@@ -15,7 +14,7 @@
 
         public override string GetDescription()
         {
-            return $"Id: {Id}, Name: {Name}, Species: {Species}, AcceptableCropType: {AcceptableCropType}";
+            return $"Id: {Id}, Name: {Name}, Species: {Species}, AcceptableCropTypes: {Crop1}, {Crop2}";
         }
 
         public void Feed(Crop acrop)

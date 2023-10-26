@@ -18,7 +18,7 @@
         public void AnimalMenu(List<Crop> MenuCrops)
         {
             bool breakbool = false;
-            while (breakbool)
+            while (!breakbool)
             {
 
 
@@ -128,7 +128,7 @@
         {
             for (int i = 0; i < animalList.Count; i++)
             {
-                animalList[i].GetDescription();
+                Console.WriteLine(animalList[i].GetDescription());
             }
         }
         public void AddAnimal()
