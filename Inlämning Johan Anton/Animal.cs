@@ -2,14 +2,15 @@
 {   //Innehåller djur som äter en vis typ av "Crop" med konstruktor som vi kan skapa en lista utav i AnimalManager
     public class Animal : Entity
     {
-        List<Crop> cropList;
         public string Species { get; set; }
-        private List<string> AcceptableCropType { get; set; }
-
-        public Animal(string _name, string _species, List<string> _acceptableCropType) : base(_name)
+        private string[] AcceptableCropType = new string[2];
+        public string Crop1;
+        public string Crop2;
+        public Animal(string _name, string _species, string crop1, string crop2) : base(_name)
         {
             Species = _species;
-            AcceptableCropType = _acceptableCropType;
+            Crop1 = crop1;
+            Crop2 = crop2;
         }
 
         public override string GetDescription()

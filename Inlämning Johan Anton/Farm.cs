@@ -10,7 +10,7 @@
             Console.WriteLine("Where do you want to go?");
             Console.WriteLine("1. Animal Menu");
             Console.WriteLine("2. Crop Menu");
-            Console.WriteLine("9. End program");
+            Console.WriteLine("3. End program");
             string input = Console.ReadLine();
 
             switch (input)
@@ -22,7 +22,7 @@
                 case "2":
                     cropmanager.CropMenu();
                     break;
-                case "9":
+                case "3":
                     Console.WriteLine("Program: Ended");
                     break;
 
