@@ -35,6 +35,7 @@
             {
                 Console.WriteLine("You must write Id-number. ");
             }
+
             for (int i = 0; i < cropList.Count; i++)
             {
                 if (cropInput == cropList[i].Id)

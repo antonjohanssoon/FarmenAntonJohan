@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w8/5iMVNZQMrwRxnLI8TFqUKeyRyDGLzKbJ5xkKaTNJfGYx5l2nNtYpVil/37U4lhO6QrQb6aGbm3A7Q3cwYgg==",
+  "dgSpecHash": "gTXuAqYaMhCp1XQPGPIce3wuEzaUlG8DbFBG5ejofq5Lu62zuohONjzpeVU+DI09hmLeu4Y9uwMFRMG8KVvaYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
+  "projectFilePath": "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\johan\\OneDrive\\Dokument\\Systemutveckling\\Grundläggande programmering\\Inlämning3November\\Inlämning Johan Anton\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

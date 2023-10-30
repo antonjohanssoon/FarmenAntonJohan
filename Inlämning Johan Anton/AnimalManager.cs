@@ -33,12 +33,15 @@
                 switch (switchinput)
                 {
                     case "1":
+                        Console.Clear();
                         ViewAnimal();
                         break;
                     case "2":
+                        Console.Clear();
                         AddAnimal();
                         break;
                     case "3":
+                        Console.Clear();
                         RemoveAnimal();
                         break;
                     case "4":
@@ -89,33 +92,30 @@
                             {
                                 Console.WriteLine(e);
                             }
-                        }
-
-                        //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
-                        Crop Crops = MenuCrops[cropchoice];
-                        Animal animal = animalList[AnimalChoice];
-                        bool AnimalCrop = false;
 
 
-                        //här används cropname från cropchoice och sedan om de stämmer överens med crop1/crop2
-                        for (int i = 0; i < animalList.Count; i++)
-                        {
-                            if (cropchoice2.Name == animalList[i].Crop1 || cropchoice2.Name == animalList[i].Crop2)
+                            //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
+                            Crop Crops = MenuCrops[cropchoice];
+                            Animal animal = animalList[AnimalChoice];
+
+
+                            //här används cropname från cropchoice och sedan om de stämmer överens med crop1/crop2
+                            for (int i = 0; i < animalList.Count; i++)
                             {
-                                AnimalCrop = true;
+                                if (cropchoice2.Name == animalList[i].Crop1 || cropchoice2.Name == animalList[i].Crop2)
+                                {
+                                    AnimalLoop = true;
+                                    Console.WriteLine("Wrong crop type for this animal.");
+                                }
                             }
-                        }
 
-                        //kontroll om djuret äter den cropen
-                        if (AnimalCrop == true)
-                        {
-                            FeedAnimals(animal, Crops);
-                            Console.WriteLine(animal.Name + " feeded succesfully!");
-                            Console.WriteLine();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Wrong crop type for this animal.");
+                            //kontroll om djuret äter den cropen
+                            if (AnimalLoop == false)
+                            {
+                                FeedAnimals(animal, Crops);
+                                Console.WriteLine(animal.Name + " feeded succesfully!");
+                                Console.WriteLine();
+                            }
                         }
                         break;
                     case "5":

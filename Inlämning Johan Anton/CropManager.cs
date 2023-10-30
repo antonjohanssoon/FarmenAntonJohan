@@ -33,12 +33,8 @@
                     string input1 = Console.ReadLine();
                     if (input1.ToLower() == cropList[i].Name.ToLower())
                     {
-                        Console.WriteLine("What quantity would you like to add to " + cropList[i].Name + " ?");
-                        int input5 = Convert.ToInt32(Console.ReadLine());
-                        cropList[i].Quantity += input5;
-                        Console.WriteLine(cropList[i].Name + " new quantity is: " + cropList[i].Quantity);
-                        QuitLoop = false;
-                        break;
+                        Crop crop = null;
+                        crop.AddCrop(crop.Quantity);
                     }
 
                     Console.WriteLine("What type of crops is it?");

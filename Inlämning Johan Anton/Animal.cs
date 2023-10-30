@@ -14,7 +14,7 @@
 
         public override string GetDescription()
         {
-            return $"Id: {Id}, Name: {Name}, Species: {Species}, AcceptableCropTypes: {Crop1}, {Crop2}";
+            return $"Id: {Id}, Name: {Name}, Species: {Species}, Acceptable Crops: {Crop1}, {Crop2}";
         }
 
         public void Feed(Crop acrop)
