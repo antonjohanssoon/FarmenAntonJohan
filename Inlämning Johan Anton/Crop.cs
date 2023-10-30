@@ -5,7 +5,7 @@
     {
         List<Crop> cropList;
         public string CropType { get; set; }
-        private int Quantity { get; set; }
+        public int Quantity { get; set; }
 
         public Crop(string _name, string _cropType, int _quantity) : base(_name)
         {
@@ -23,7 +23,7 @@
         //lägg till i kvantitet 
         public void AddCrop(int _quantity)
         {
-            
+            //cropmanager.GetCrops();
             Console.WriteLine("Write the ID-number of the crop you want to increase");
             int cropInput = 0;
 
@@ -48,25 +48,15 @@
                     Console.WriteLine("Crop ID not found!");
                 }
             }
-
-            Quantity += _quantity;
-            Console.WriteLine(Name + " new quantity is: " + Quantity);
-
         }
 
-        public bool TakeCrop(int _quantity)
+        public bool TakeCrop(Crop acrop)
         {
-            if (Quantity <= 0)
+            if (acrop.Quantity < 0)
             {
                 return false;
-                Console.WriteLine("No crop of that type exists. Feeding failed.");
-
             }
-            else
-            {
-                Quantity -= _quantity;
-                return true;
-            }
+            return true;
         }
 
     }

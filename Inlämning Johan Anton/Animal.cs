@@ -17,20 +17,13 @@
             return $"Id: {Id}, Name: {Name}, Species: {Species}, Acceptable Crops: {Crop1}, {Crop2}";
         }
 
-
         public void Feed(Crop acrop)
         {
-            int croptaken = -1;
-            bool cropTaken = acrop.TakeCrop(croptaken);
-            if (cropTaken)
-            {
-                Console.WriteLine(Name + " is eating" + acrop.Name + ".");
-            }
-            else
-            {
-                Console.WriteLine("There´s no " + acrop.Name + " to eat...");
-            }
+            acrop.Quantity -= 1;
         }
-
     }
 }
+//crops skall försvinna från quantity när ett djur äter crops.
+//vad äter djuret?
+//få fram en lista på alla djur så man kan välja vem man skall mata
+//sedan måste "AcceptableCropType == CropType " för att djuret skall äta det
