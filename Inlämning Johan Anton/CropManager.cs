@@ -27,31 +27,35 @@
             while (QuitLoop)
             {
 
-                for (int i = 0; i < 2; i++)
+
+                Console.WriteLine("What crop would you like to add?");
+                string input1 = Console.ReadLine();
+                Crop crop = null;
+                for (int i = 0; i < cropList.Count; i++)
                 {
-                    Console.WriteLine("What crop would you like to add?");
-                    string input1 = Console.ReadLine();
                     if (input1.ToLower() == cropList[i].Name.ToLower())
                     {
-                        Crop crop = null;
+                        crop = cropList[i];
                         crop.AddCrop(crop.Quantity);
+                        return;
                     }
+                    else
+                    {
+                        Console.WriteLine("What type of crops is it?");
+                        string input2 = Console.ReadLine();
 
-                    Console.WriteLine("What type of crops is it?");
-                    string input2 = Console.ReadLine();
+                        Console.WriteLine("What quantity?");
+                        int input3 = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("What quantity?");
-                    int input3 = Convert.ToInt32(Console.ReadLine());
-
-                    Crop newcrop = new Crop(input1, input2, input3);
-                    cropList.Add(newcrop);
-
-
-                }// måste lägga in en funktion ifall en crop redan finns så skall endast quantity öka
-                //
+                        Crop newcrop = new Crop(input1, input2, input3);
+                        cropList.Add(newcrop);
+                        return;
+                    }
+                }
             }
-
         }
+
+        
 
         private int RemoveCrop()
         {
@@ -72,6 +76,7 @@
                         int subinput = Convert.ToInt32(Console.ReadLine());
                         int newquantity = cropList[i].Quantity - subinput;
                         Console.WriteLine(cropList[i].Name + " new quantity is: " + newquantity);
+                        cropList[i].Quantity -= subinput;
                         Cropfound = true;
 
                         return newquantity;
@@ -100,7 +105,7 @@
                 Console.WriteLine("1: View Crops.");
                 Console.WriteLine("2: Add Crops.");
                 Console.WriteLine("3: Remove Crops.");
-                Console.WriteLine("4: Quit");
+                Console.WriteLine("4: Return to main menu");
                 string input = Console.ReadLine();
 
                 switch (input)

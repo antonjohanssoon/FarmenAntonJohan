@@ -31,7 +31,6 @@
                 switch (switchinput)
                 {
                     case "1":
-                        Console.Clear();
                         ViewAnimal();
                         break;
                     case "2":
@@ -54,14 +53,15 @@
                         {
                             for (int i = 0; i < MenuCrops.Count; i++)
                             {
-                                Console.WriteLine($"{i}, {MenuCrops[i].Name}");
+                                Console.WriteLine($"{MenuCrops[i].Id}, {MenuCrops[i].Name}");
                                 Console.WriteLine("");
                             }
                             try
                             {
-                                cropchoice = Convert.ToInt32(Console.ReadLine());
+                                cropchoice = Convert.ToInt32(Console.ReadLine()) - 1;
                                 //Gör om cropchoice som är int till cropchoice2 som är av typen Crop
                                 cropchoice2 = MenuCrops[cropchoice];
+                                
                                 CropLoop = true;
                             }
                             catch (Exception e)
@@ -78,16 +78,18 @@
                         {
                             for (int i = 0; i < animalList.Count; i++)
                             {
-                                Console.WriteLine($"{i}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
+                                Console.WriteLine($"{animalList[i].Id}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
                             }
                             Console.WriteLine("Choose animal by index.");
                             try
                             {
                                 AnimalChoice = Convert.ToInt32(Console.ReadLine());
+                                AnimalChoice--;
                             }
                             catch (Exception e)
                             {
                                 Console.WriteLine(e);
+                                return;
                             }
 
                             //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
@@ -104,7 +106,7 @@
                             if (AnimalCrop == true)
                             {
                                 FeedAnimals(animal, Crops);
-                                Console.WriteLine(animal.Name + " feeded succesfully!");
+                                
                                 Console.WriteLine();
                                 AnimalLoop = true;
                             }
@@ -113,6 +115,7 @@
                                 Console.WriteLine("Wrong crop type for this animal.");
                                 break;
                             }
+
                         }
                         break;
                     case "5":
@@ -196,8 +199,14 @@
         private void FeedAnimals(Animal aAnimal, Crop acrop)
         {
             aAnimal.Feed(acrop);
-
+            if (acrop.TakeCrop(acrop) == true)
+            {
+                Console.WriteLine("feeded");
+            }
+            else
+            {
+                Console.WriteLine("No crops left");
+            }
         }
-
     }
 }

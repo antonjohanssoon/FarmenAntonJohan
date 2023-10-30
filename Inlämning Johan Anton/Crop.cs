@@ -1,16 +1,14 @@
 ﻿namespace Farm.anton.johan
-{   //Innehåller olika växter med antal, typer,namn, id 
-
+{   
     public class Crop : Entity
     {
-        List<Crop> cropList;
         public string CropType { get; set; }
         public int Quantity { get; set; }
         private static int NextId = 1;
-
+        
         public Crop(string _name, string _cropType, int _quantity) : base(NextId,_name)
         {
-            NextId = NextId + 1;
+            NextId++;
             CropType = _cropType;
             Quantity = _quantity;
 
@@ -25,31 +23,19 @@
         //lägg till i kvantitet 
         public void AddCrop(int _quantity)
         {
-            //cropmanager.GetCrops();
-            Console.WriteLine("Write the ID-number of the crop you want to increase");
-            int cropInput = 0;
-
+            
+            Console.WriteLine("How many?");
             try
             {
-                cropInput = Convert.ToInt32(Console.ReadLine());
+                _quantity = Convert.ToInt32(Console.ReadLine());
             }
             catch
             {
                 Console.WriteLine("You must write Id-number. ");
+                return;
             }
-
-            for (int i = 0; i < cropList.Count; i++)
-            {
-                if (cropInput == cropList[i].Id)
-                {
-
-                    cropList[i].Quantity += _quantity;
-                }
-                else
-                {
-                    Console.WriteLine("Crop ID not found!");
-                }
-            }
+            
+            Quantity += _quantity;
         }
 
         public bool TakeCrop(Crop acrop)
@@ -58,7 +44,10 @@
             {
                 return false;
             }
-            return true;
+            else 
+            {
+                return true;
+            }
         }
 
     }
