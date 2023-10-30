@@ -56,7 +56,7 @@
                         {
                             for (int i = 0; i < MenuCrops.Count; i++)
                             {
-                                Console.WriteLine($"{i}, {MenuCrops[i].Name} , {MenuCrops[i].CropType},  {MenuCrops[i].Quantity} ");
+                                Console.WriteLine($"{i}, {MenuCrops[i].Name} , {MenuCrops[i].CropType}");
                                 Console.WriteLine("");
                             }
                             try
@@ -119,6 +119,7 @@
                         }
                         break;
                     case "5":
+                        Console.Clear();
                         Console.WriteLine("You returned to main menu!");
                         breakbool = true;
                         break;
@@ -145,15 +146,41 @@
 
                 for (int i = 0; i < 2; i++)
                 {
+
                     Console.WriteLine("What´s the name of the animal you would like to add?");
-                    string input1 = Console.ReadLine();
+                    string input1 = null;
+                    try
+                    {
+                        input1 = Console.ReadLine();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
 
                     Console.WriteLine("What species is the animal?");
-                    string input2 = Console.ReadLine();
+                    string input2 = null;
+                    try
+                    {
+                        input2 = Console.ReadLine();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
 
                     Console.WriteLine("Write 2 crops the animal can eat.");
-                    string crop1 = Console.ReadLine();
-                    string crop2 = Console.ReadLine();
+                    string crop1 = null;
+                    string crop2 = null;
+                    try
+                    {
+                        crop1 = Console.ReadLine();
+                        crop2 = Console.ReadLine();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
 
                     Animal newanimal = new Animal(input1, input2, crop1, crop2);
                     animalList.Add(newanimal);
