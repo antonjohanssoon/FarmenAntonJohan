@@ -20,8 +20,6 @@
             bool breakbool = false;
             while (!breakbool)
             {
-
-
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1: View Animals.");
                 Console.WriteLine("2: Add Animals.");
@@ -56,7 +54,7 @@
                         {
                             for (int i = 0; i < MenuCrops.Count; i++)
                             {
-                                Console.WriteLine($"{i}, {MenuCrops[i].Name} , {MenuCrops[i].CropType},  {MenuCrops[i].Quantity} ");
+                                Console.WriteLine($"{i}, {MenuCrops[i].Name}");
                                 Console.WriteLine("");
                             }
                             try
@@ -72,12 +70,12 @@
                             }
                         }
                         bool AnimalLoop = false;
-
                         //man gör att val av animal och sen kontrolleras svaret.
                         int AnimalChoice = 0;
+
+
                         while (!AnimalLoop)
                         {
-
                             for (int i = 0; i < animalList.Count; i++)
                             {
                                 Console.WriteLine($"{i}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
@@ -86,35 +84,34 @@
                             try
                             {
                                 AnimalChoice = Convert.ToInt32(Console.ReadLine());
-                                AnimalLoop = true;
                             }
                             catch (Exception e)
                             {
                                 Console.WriteLine(e);
                             }
 
-
                             //här skapas crops/animal och lägger in den specifika cropen och djuret i var sin variabel
                             Crop Crops = MenuCrops[cropchoice];
                             Animal animal = animalList[AnimalChoice];
-
-
-                            //här används cropname från cropchoice och sedan om de stämmer överens med crop1/crop2
-                            for (int i = 0; i < animalList.Count; i++)
+                            bool AnimalCrop = false;
+                            //kontroll om djuret äter den cropen
+                            if (cropchoice2.Name == animal.Crop1 || cropchoice2.Name == animal.Crop2)
                             {
-                                if (cropchoice2.Name == animalList[i].Crop1 || cropchoice2.Name == animalList[i].Crop2)
-                                {
-                                    AnimalLoop = true;
-                                    Console.WriteLine("Wrong crop type for this animal.");
-                                }
+                                AnimalCrop = true;
                             }
 
                             //kontroll om djuret äter den cropen
-                            if (AnimalLoop == false)
+                            if (AnimalCrop == true)
                             {
                                 FeedAnimals(animal, Crops);
                                 Console.WriteLine(animal.Name + " feeded succesfully!");
                                 Console.WriteLine();
+                                AnimalLoop = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Wrong crop type for this animal.");
+                                break;
                             }
                         }
                         break;

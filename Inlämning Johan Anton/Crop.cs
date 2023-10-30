@@ -6,9 +6,11 @@
         List<Crop> cropList;
         public string CropType { get; set; }
         public int Quantity { get; set; }
+        private static int NextId = 1;
 
-        public Crop(string _name, string _cropType, int _quantity) : base(_name)
+        public Crop(string _name, string _cropType, int _quantity) : base(NextId,_name)
         {
+            NextId = NextId + 1;
             CropType = _cropType;
             Quantity = _quantity;
 

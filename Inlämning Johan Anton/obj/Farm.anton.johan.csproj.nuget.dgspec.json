@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {}
+    "C:\\Users\\johan\\OneDrive\\Plugg\\Klon\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {
+    "C:\\Users\\johan\\OneDrive\\Plugg\\Klon\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
+        "projectUniqueName": "C:\\Users\\johan\\OneDrive\\Plugg\\Klon\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
         "projectName": "Farm.anton.johan",
-        "projectPath": "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
+        "projectPath": "C:\\Users\\johan\\OneDrive\\Plugg\\Klon\\FarmenAntonJohan\\Inlämning Johan Anton\\Farm.anton.johan.csproj",
         "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johan\\OneDrive\\Plugg\\c# program\\FarmenAntonJohan\\Inlämning Johan Anton\\obj\\",
+        "outputPath": "C:\\Users\\johan\\OneDrive\\Plugg\\Klon\\FarmenAntonJohan\\Inlämning Johan Anton\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\johan\\AppData\\Roaming\\NuGet\\NuGet.Config",

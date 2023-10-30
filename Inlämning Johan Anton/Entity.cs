@@ -10,10 +10,10 @@ namespace Farm.anton.johan
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        private static int NextId = 1;
-        public Entity(string _name) 
+        
+        public Entity(int _id ,string _name) 
         {
-            Id = NextId++;
+            Id = _id;
             Name = _name;
         }
         
