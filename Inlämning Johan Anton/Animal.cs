@@ -25,7 +25,3 @@
         }
     }
 }
-//crops skall försvinna från quantity när ett djur äter crops.
-//vad äter djuret?
-//få fram en lista på alla djur så man kan välja vem man skall mata
-//sedan måste "AcceptableCropType == CropType " för att djuret skall äta det

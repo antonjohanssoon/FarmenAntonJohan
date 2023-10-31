@@ -85,3 +85,17 @@ C:\Users\johan\OneDrive\Plugg\Klon\FarmenAntonJohan\Inlämning Johan Anton\obj\D
 C:\Users\johan\OneDrive\Plugg\Klon\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.pdb
 C:\Users\johan\OneDrive\Plugg\Klon\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.genruntimeconfig.cache
 C:\Users\johan\OneDrive\Plugg\Klon\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\ref\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.exe
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.deps.json
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.runtimeconfig.json
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\bin\Debug\net6.0\Farm.anton.johan.pdb
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfoInputs.cache
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.AssemblyInfo.cs
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.csproj.CoreCompileInputs.cache
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\refint\Farm.anton.johan.dll
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.pdb
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\Farm.anton.johan.genruntimeconfig.cache
+C:\Users\johan\OneDrive\Dokument\Systemutveckling\Grundläggande programmering\Inlämning3November\FarmenAntonJohan\Inlämning Johan Anton\obj\Debug\net6.0\ref\Farm.anton.johan.dll

@@ -13,6 +13,7 @@
         }
         private void ViewCrop()
         {
+            Console.WriteLine("Your list of crops:");
             for (int i = 0; i < cropList.Count; i++)
             {
                 Console.WriteLine(cropList[i].GetDescription());
@@ -28,7 +29,7 @@
             {
 
 
-                Console.WriteLine("What crop would you like to add?");
+                Console.WriteLine("What crop would you like to add? Write it´s name");
                 string input1 = Console.ReadLine();
                 Crop crop = null;
                 for (int i = 0; i < cropList.Count; i++)
@@ -49,44 +50,51 @@
 
                         Crop newcrop = new Crop(input1, input2, input3);
                         cropList.Add(newcrop);
+                        Console.WriteLine(newcrop.Name + " added to your list of crops!");
                         return;
                     }
                 }
             }
         }
 
-        
+
 
         private int RemoveCrop()
         {
             ViewCrop();
 
-            Console.WriteLine("What crop do you want to remove? Answear by Id: "); //lägg in så man ser vilken man valde och dess nuvarande quantity
+            Console.WriteLine("What crop do you want to remove? Answear by ID: "); //lägg in så man ser vilken man valde och dess nuvarande quantity
             int input1 = Convert.ToInt32(Console.ReadLine());
             bool Cropfound = false;
 
-            while (!Cropfound)
+
+            for (int i = 0; i < cropList.Count; i++)
             {
-
-                for (int i = 0; i < cropList.Count; i++)
+                if (input1 == cropList[i].Id)
                 {
-                    if (input1 == cropList[i].Id)
+                    Console.WriteLine("What quantity do you want to remove?");
+                    int subinput = Convert.ToInt32(Console.ReadLine());
+                    int newquantity = cropList[i].Quantity - subinput;
+                    if (newquantity < 0)
                     {
-                        Console.WriteLine("What quantity do you want to remove?");
-                        int subinput = Convert.ToInt32(Console.ReadLine());
-                        int newquantity = cropList[i].Quantity - subinput;
-                        Console.WriteLine(cropList[i].Name + " new quantity is: " + newquantity);
-                        cropList[i].Quantity -= subinput;
+                        Console.WriteLine("Invalid operation. Quantity can´t be less than 0!");
                         Cropfound = true;
-
-                        return newquantity;
                     }
                     else
                     {
-                        Console.WriteLine("Invalid Crop ID !");
+                        Console.WriteLine(cropList[i].Name + " new quantity is: " + newquantity);
+                        cropList[i].Quantity -= subinput;
+                        Cropfound = true;
+                        return newquantity;
                     }
+
                 }
             }
+            if (!Cropfound)
+            {
+                Console.WriteLine("Invalid Crop Index!");
+            }
+
             return 0;
         }
         //ger tbx lista
@@ -111,16 +119,21 @@
                 switch (input)
                 {
                     case "1":
+                        Console.Clear();
                         ViewCrop();
                         break;
                     case "2":
+                        Console.Clear();
                         AddCrop();
                         break;
                     case "3":
+                        Console.Clear();
                         RemoveCrop();
                         break;
                     case "4":
                         Boolfound = true;
+                        break;
+                    default:
                         break;
                 }
             }

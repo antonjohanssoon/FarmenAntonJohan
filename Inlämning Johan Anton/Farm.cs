@@ -29,6 +29,8 @@
                         Console.WriteLine("Program: Ended");
                         breakMenu = false;
                         break;
+                    default:
+                        break;
 
                 }
             }

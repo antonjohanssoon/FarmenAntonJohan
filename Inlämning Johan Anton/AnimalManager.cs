@@ -31,6 +31,7 @@
                 switch (switchinput)
                 {
                     case "1":
+                        Console.Clear();
                         ViewAnimal();
                         break;
                     case "2":
@@ -53,15 +54,15 @@
                         {
                             for (int i = 0; i < MenuCrops.Count; i++)
                             {
-                                Console.WriteLine($"{MenuCrops[i].Id}, {MenuCrops[i].Name}");
+                                Console.WriteLine($"{i}, {MenuCrops[i].Name}");
                                 Console.WriteLine("");
                             }
                             try
                             {
-                                cropchoice = Convert.ToInt32(Console.ReadLine()) - 1;
+                                cropchoice = Convert.ToInt32(Console.ReadLine());
                                 //Gör om cropchoice som är int till cropchoice2 som är av typen Crop
                                 cropchoice2 = MenuCrops[cropchoice];
-                                
+
                                 CropLoop = true;
                             }
                             catch (Exception e)
@@ -78,13 +79,12 @@
                         {
                             for (int i = 0; i < animalList.Count; i++)
                             {
-                                Console.WriteLine($"{animalList[i].Id}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
+                                Console.WriteLine($"{i}, {animalList[i].Species} , {animalList[i].Name} , {animalList[i].Crop1} or {animalList[i].Crop2} ");
                             }
                             Console.WriteLine("Choose animal by index.");
                             try
                             {
                                 AnimalChoice = Convert.ToInt32(Console.ReadLine());
-                                AnimalChoice--;
                             }
                             catch (Exception e)
                             {
@@ -106,7 +106,7 @@
                             if (AnimalCrop == true)
                             {
                                 FeedAnimals(animal, Crops);
-                                
+
                                 Console.WriteLine();
                                 AnimalLoop = true;
                             }
@@ -122,6 +122,8 @@
                         Console.WriteLine("You returned to main menu!");
                         breakbool = true;
                         break;
+                    default:
+                        break;
 
                 }
 
@@ -130,6 +132,7 @@
         }
         private void ViewAnimal()
         {
+            Console.WriteLine("Your list of animals:");
             for (int i = 0; i < animalList.Count; i++)
             {
                 Console.WriteLine(animalList[i].GetDescription());
@@ -157,8 +160,9 @@
 
                     Animal newanimal = new Animal(input1, input2, crop1, crop2);
                     animalList.Add(newanimal);
+                    Console.WriteLine(newanimal.Name + " added to your list of animals!");
 
-                    Console.WriteLine("Do you want to continue? yes/no?");
+                    Console.WriteLine("Do you want to add another animal? yes/no?");
                     string input4 = Console.ReadLine();
 
                     if (input4 == "no")
@@ -182,7 +186,7 @@
             if (animalToRemove != null)
             {
                 animalList.Remove(animalToRemove);
-                Console.WriteLine("Animal succesfully removed from the list!");
+                Console.WriteLine(animalToRemove.Name + " succesfully removed from the list!");
             }
             else
             {
@@ -201,7 +205,7 @@
             aAnimal.Feed(acrop);
             if (acrop.TakeCrop(acrop) == true)
             {
-                Console.WriteLine("feeded");
+                Console.WriteLine(aAnimal.Name + " feeded succesfully!");
             }
             else
             {

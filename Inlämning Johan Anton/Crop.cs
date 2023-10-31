@@ -1,12 +1,12 @@
 ﻿namespace Farm.anton.johan
-{   
+{
     public class Crop : Entity
     {
         public string CropType { get; set; }
         public int Quantity { get; set; }
         private static int NextId = 1;
-        
-        public Crop(string _name, string _cropType, int _quantity) : base(NextId,_name)
+
+        public Crop(string _name, string _cropType, int _quantity) : base(NextId, _name)
         {
             NextId++;
             CropType = _cropType;
@@ -23,7 +23,7 @@
         //lägg till i kvantitet 
         public void AddCrop(int _quantity)
         {
-            
+
             Console.WriteLine("How many?");
             try
             {
@@ -34,8 +34,9 @@
                 Console.WriteLine("You must write Id-number. ");
                 return;
             }
-            
+
             Quantity += _quantity;
+            Console.WriteLine(Name + " new quantity: " + Quantity);
         }
 
         public bool TakeCrop(Crop acrop)
@@ -44,7 +45,7 @@
             {
                 return false;
             }
-            else 
+            else
             {
                 return true;
             }
